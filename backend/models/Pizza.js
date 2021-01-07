@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
-module.exports = mongoose.model('pizza', {
+export default mongoose.model('pizza', {
   title: {
     type: String,
     required: true,

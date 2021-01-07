@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
-module.exports = mongoose.model('user', {
-  login: {
+export default mongoose.model('user', {
+  userName: {
     type: String,
     required: true,
     unique: true,
