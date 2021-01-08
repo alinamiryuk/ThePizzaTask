@@ -6,12 +6,12 @@ import { useRoutes } from './routes'
 function App() {
   const checkAuth = useSelector((state) => state.auth.success)
   const routes = useRoutes(checkAuth)
-console.log(checkAuth);
+  console.log(checkAuth)
   return (
-    <>
+    <div className="app">
       <Navbar />
       {routes}
-    </>
+    </div>
   )
 }
 
