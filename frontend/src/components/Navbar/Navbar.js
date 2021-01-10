@@ -13,7 +13,7 @@ export const Navbar = () => {
       <div className="navbar">
         <h4> {userName}</h4>
         <Logout />
-        <NavLink to="/cart">Cart <span>{cart.length}</span></NavLink>
+        <NavLink to="/cart">Cart <span>{cart.pizza.length}</span></NavLink>
       </div>
     )
   } else {
@@ -21,7 +21,7 @@ export const Navbar = () => {
       <div className="navbar">
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/signup">Signup</NavLink>
-        <NavLink to="/cart">Cart <span>{cart.length}</span></NavLink>
+        <NavLink to="/cart">Cart <span>{cart.pizza.length}</span></NavLink>
       </div>
     )
   }

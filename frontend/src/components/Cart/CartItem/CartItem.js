@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addToCart } from '../../../redux/actions/cartActions'
+import { addToCart, deleteFromCart } from '../../../redux/actions/cartActions'
 import './CartItem.css'
 
 export const CartItem = ({ item }) => {
   const dispatch = useDispatch()
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(1)
+  let cartPrice = item.price * counter
+
   return (
     <div className="cartItem">
       <img src={`${item.image}`} />
@@ -16,10 +18,12 @@ export const CartItem = ({ item }) => {
         </div>
       </div>
       <div className="cartItem__counter">
-        {item.price} $
+        {cartPrice} $
         <button
           onClick={() => {
-            setCounter((state) => (state === 0 ? 0 : state - 1))
+            counter === 1
+              ? dispatch(deleteFromCart(item._id))
+              : setCounter((state) => state - 1)
           }}
         >
           -
@@ -28,7 +32,6 @@ export const CartItem = ({ item }) => {
         <button
           onClick={() => {
             setCounter((state) => state + 1)
-            dispatch(addToCart(item))
           }}
         >
           +
