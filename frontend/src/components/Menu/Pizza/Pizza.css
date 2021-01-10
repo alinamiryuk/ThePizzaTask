@@ -28,12 +28,12 @@
   text-transform: uppercase;
 }
 
-.pizza__counter  {
+.pizza__addPrice  {
   display: flex;
   align-items: center;
 }
 
-.pizza__counter > button {
+.pizza__addPrice > button {
   flex-basis: 90%;
   border:none;
   outline: none;
@@ -43,7 +43,7 @@
   height: fit-content;
 }
 
-.pizza__counter > p {
+.pizza__addPrice > p {
   flex-basis: 10%;
 }
 

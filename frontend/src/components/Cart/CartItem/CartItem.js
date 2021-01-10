@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../../redux/actions/cartActions'
+import './CartItem.css'
 
 export const CartItem = ({ item }) => {
   const dispatch = useDispatch()
@@ -8,10 +9,14 @@ export const CartItem = ({ item }) => {
   return (
     <div className="cartItem">
       <img src={`${item.image}`} />
-      <h3>{item.title}</h3>
-      {item.text}
-      <div className="pizza__counter">
-        {item.price}
+      <div className="cartItem__infoWrapper">
+        <div className="cartItem__info">
+          <h1>{item.title}</h1>
+          <p>{item.text}</p>
+        </div>
+      </div>
+      <div className="cartItem__counter">
+        {item.price} $
         <button
           onClick={() => {
             setCounter((state) => (state === 0 ? 0 : state - 1))

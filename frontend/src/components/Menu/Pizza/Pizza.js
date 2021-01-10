@@ -11,7 +11,7 @@ export const Pizza = ({ pizza }) => {
       <img src={`${pizza.image}`} />
       <h3>{pizza.title}</h3>
       {pizza.text}
-      <div className="pizza__counter">
+      <div className="pizza__addPrice">
         <p>{pizza.price} $</p>
         <button
           onClick={() => {
