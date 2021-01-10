@@ -1,0 +1,35 @@
+.cart {
+  width: 70vw;
+}
+
+.cart__priceInfo {
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__priceInfo > p {
+  font-size: larger;
+  font-weight: 400;
+  display: inline;
+}
+
+.cart__priceInfo > p > span {
+  color: #741c16;
+  text-transform: capitalize;
+}
+
+.cart__priceInfo > button {
+  border: none;
+  background: #741c16;
+  color: #e0d6b3;
+  cursor: pointer;
+  flex-basis: 25%;
+}
+
+.cart__priceInfo > button:hover {
+  border: 1px solid #741c16;
+  outline: none;
+  background: none;
+  color:#741c16
+}

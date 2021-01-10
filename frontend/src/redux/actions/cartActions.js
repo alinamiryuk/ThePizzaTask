@@ -1,22 +1,39 @@
-import { ADD_TO_CART, DELETE_FROM_CART, CLEAR_CART } from '../actionTypes'
+import {
+  ADD_TO_CART,
+  DELETE_FROM_CART,
+  CLEAR_CART,
+  GET_SUM,
+} from '../actionTypes'
 
-export const addToCart = (title, text, price, image, _id) => {
+export const addToCart = (pizza) => {
   return {
     type: ADD_TO_CART,
-    payload: { title, text, price, image, _id },
+    payload: pizza,
+  }
+}
+
+export const getSum = (order) => {
+  const sum = order.reduce((prev, item) => {
+    return prev + item.price
+  }, 0)
+  const delivery = sum > 30 ? 0 : 2
+  const total = delivery + sum
+  return {
+    type: GET_SUM,
+    payload: { sum, delivery, total },
   }
 }
 
 export const deleteFromCart = (_id) => {
-  return { 
-    type: DELETE_FROM_CART, 
-    payload: _id 
+  return {
+    type: DELETE_FROM_CART,
+    payload: _id,
   }
 }
 
 // export const clearCart = () => {
 //   return {
 //     type: CLEAR_CART,
-//     payload: 
+//     payload:
 //   }
 // }

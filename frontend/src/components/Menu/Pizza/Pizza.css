@@ -28,13 +28,22 @@
   text-transform: uppercase;
 }
 
-.pizza__counter > button {
+.pizza__addPrice  {
+  display: flex;
+  align-items: center;
+}
+
+.pizza__addPrice > button {
+  flex-basis: 90%;
   border:none;
   outline: none;
   background: #741c16;
   color: #e0d6b3;
-  width: 1vw;
-  margin: 5px;
   cursor: pointer;
+  height: fit-content;
+}
+
+.pizza__addPrice > p {
+  flex-basis: 10%;
 }
 
