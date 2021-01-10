@@ -1,0 +1,8 @@
+export const LOGIN_AUTH = 'LOGIN_AUTH'
+export const SIGNUP_AUTH = 'SIGNUP_AUTH'
+export const LOGOUT_AUTH = 'LOGOUT_AUTH'
+export const GET_ALL_PIZZAS = 'GET_ALL_PIZZAS'
+export const ADD_TO_CART = 'ADD_TO_CART'
+export const GET_SUM = 'GET_SUM'
+export const DELETE_FROM_CART = 'DELETE_FROM_CART'
+export const CLEAR_CART = 'CLEAR_CART'

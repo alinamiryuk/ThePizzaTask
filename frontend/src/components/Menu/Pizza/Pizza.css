@@ -1,0 +1,49 @@
+.pizza {
+  flex-basis: 23%;
+  box-shadow: 2px 8px 20px #dddddd;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.5s linear;
+  height: 400px;
+}
+
+.pizza:hover {
+  background-color: #faf8ed;
+}
+
+.pizza > img {
+  max-width: 300px; 
+  max-height: 300px; 
+  height: 100%;
+  width: 100%; 
+  display: block;
+  object-fit: cover;
+}
+
+.pizza > h3 {
+  text-transform: uppercase;
+}
+
+.pizza__addPrice  {
+  display: flex;
+  align-items: center;
+}
+
+.pizza__addPrice > button {
+  flex-basis: 90%;
+  border:none;
+  outline: none;
+  background: #741c16;
+  color: #e0d6b3;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.pizza__addPrice > p {
+  flex-basis: 10%;
+}
+
