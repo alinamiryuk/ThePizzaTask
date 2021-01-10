@@ -9,6 +9,7 @@ export const useRoutes = (auth) => {
 return (
     <Switch>
       {/* <Route path="/order" component={} /> */}
+      <Route path="/cart" component={Menu} />
       <Route path="/" component={Menu} />
       <Redirect to="/" />
     </Switch>
@@ -16,6 +17,7 @@ return (
   } else {
     return (
       <Switch>
+        <Route path="/cart" component={Menu} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/" component={Menu} />
