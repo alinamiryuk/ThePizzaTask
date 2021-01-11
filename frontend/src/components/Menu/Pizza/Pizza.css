@@ -43,6 +43,14 @@
   height: fit-content;
 }
 
+.pizza__addPrice > button:disabled {
+  background: none;
+  border:1px solid #741c16;
+  color: #741c16;
+  cursor: not-allowed;
+
+}
+
 .pizza__addPrice > p {
   flex-basis: 10%;
 }
