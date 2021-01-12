@@ -18,7 +18,7 @@ export const Pizza = ({ pizza }) => {
           <button
             onClick={() => {
               if (check) {
-                dispatch(addToCart(pizza))
+                dispatch(addToCart({...pizza, quantity: 1}))
               } else {
                 alert('This pizza is already in your cart')
               }

@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addToCart, deleteFromCart } from '../../../redux/actions/cartActions'
+import {
+  addToCart,
+  deleteFromCart,
+  editQuantity,
+} from '../../../redux/actions/cartActions'
 import './CartItem.css'
 
 export const CartItem = ({ item }) => {
   const dispatch = useDispatch()
-  const [counter, setCounter] = useState(1)
+  const [counter, setCounter] = useState(item.quantity)
   let cartPrice = item.price * counter
 
   return (
@@ -21,17 +25,19 @@ export const CartItem = ({ item }) => {
         {cartPrice} $
         <button
           onClick={() => {
-            counter === 1
+            return counter === 1
               ? dispatch(deleteFromCart(item._id))
-              : setCounter((state) => state - 1)
+              : (setCounter((state) => state - 1),
+                dispatch(editQuantity(item._id, counter - 1)))
           }}
         >
           -
         </button>
-        {counter}
+        {item.quantity}
         <button
           onClick={() => {
             setCounter((state) => state + 1)
+            dispatch(editQuantity(item._id, counter + 1))
           }}
         >
           +
