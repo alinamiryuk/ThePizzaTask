@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { CartItem } from './CartItem/CartItem'
-import './Cart.css'
 import { getSum } from '../../redux/actions/cartActions'
+import './Cart.css'
 
 export const Cart = () => {
   const cart = useSelector((state) => state.cart)

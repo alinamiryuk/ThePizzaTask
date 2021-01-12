@@ -9,7 +9,6 @@ export const useRoutes = (auth) => {
   if (auth) {
 return (
     <Switch>
-      {/* <Route path="/order" component={} /> */}
       <Route path="/cart" component={Cart} />
       <Route path="/" component={Menu} />
       <Redirect to="/" />

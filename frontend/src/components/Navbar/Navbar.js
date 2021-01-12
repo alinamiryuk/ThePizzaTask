@@ -11,17 +11,23 @@ export const Navbar = () => {
     const userName = JSON.parse(localStorage.getItem('user')).username
     return (
       <div className="navbar">
-        <h4> {userName}</h4>
-        <Logout />
-        <NavLink to="/cart">Cart <span>{cart.pizza.length}</span></NavLink>
+        <NavLink to="/">Main</NavLink>
+        <span> HI, {userName}</span>
+        <NavLink to="/"><Logout /></NavLink>
+        <NavLink to="/cart">
+          Cart <span>{cart.pizza.length}</span>
+        </NavLink>
       </div>
     )
   } else {
     return (
       <div className="navbar">
+        <NavLink to="/">Main</NavLink>
         <NavLink to="/login">Login</NavLink>
         <NavLink to="/signup">Signup</NavLink>
-        <NavLink to="/cart">Cart <span>{cart.pizza.length}</span></NavLink>
+        <NavLink to="/cart">
+          Cart <span>{cart.pizza.length}</span>
+        </NavLink>
       </div>
     )
   }

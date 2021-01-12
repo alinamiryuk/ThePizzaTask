@@ -10,7 +10,6 @@ const initialState = { pizza: [], sum: 0, delivery: 0, total: 0 }
 export const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      // const customer = JSON.parse(localStorage.getItem('user'))
       return { ...state, pizza: [...state.pizza, action.payload] }
     case GET_SUM:
       return {
