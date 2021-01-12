@@ -8,24 +8,35 @@
   width: 100vw;
   margin-bottom: 10px;
 }
+.navbar > a,
+.navbar > span, .navbar > a > button {
+  color: #741c16;
+}
 
 .navbar > a {
-  color: #741c16;
   text-decoration: none;
   position: relative;
 }
 
 .navbar > a:hover {
-  color: #5F7A1E
+  color: #5f7a1e;
 }
 
 .navbar > a > span {
   position: absolute;
   top: -15px;
   background-color: #741c16;
-  font-size: 15px;
+  font-size: 12px;
   color: #e0d6b3;
   padding: 3px 5px 3px 5px;
   border-radius: 50%;
 }
 
+.navbar > a > button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: medium;
+  text-transform: uppercase;
+  
+}
