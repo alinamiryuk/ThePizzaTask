@@ -1,0 +1,40 @@
+.login {
+  box-shadow: 2px 8px 20px #dddddd;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  padding: 5vh;
+  margin: 30px;
+  height: 40vh;
+}
+
+.login, .login > label > a {
+  font-weight: 300;
+  color: #741c16;
+  text-transform: uppercase;
+}
+
+.login > input {
+  border: 1px solid #741c16;
+  outline: none;
+  color:#741c16;
+  cursor: pointer;
+  height: fit-content;
+  margin: 5px;
+  width: 10vw;
+}
+
+.login > button {
+  border: none;
+  outline: none;
+  background: #741c16;
+  color: #e0d6b3;
+  cursor: pointer;
+  height: fit-content;
+  margin: 5px;
+  width: 10vw;
+}

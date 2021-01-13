@@ -3,13 +3,14 @@ import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { useForm } from '../../hooks/useForm'
 import { fetchLoginAuth } from '../../redux/thunks'
+import './Login.css'
 
 export const Login = () => {
   const dispatch = useDispatch()
   const [state, setState] = useForm({ userName: '', password: '' })
 
   return (
-    <div>
+    <div className="login">
       <h3>Log in if you have already registered </h3>
       <label htmlFor="userName-login">Username:</label>
       <input
@@ -36,7 +37,7 @@ export const Login = () => {
           dispatch(fetchLoginAuth(state))
         }}
       >
-        Log in
+        LOG IN
       </button>
       <label>
         Don't have an account?

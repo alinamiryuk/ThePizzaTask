@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { CartItem } from './CartItem/CartItem'
-import './Cart.css'
 import { getSum } from '../../redux/actions/cartActions'
+import './Cart.css'
 
 export const Cart = () => {
   const cart = useSelector((state) => state.cart)
@@ -10,7 +10,7 @@ export const Cart = () => {
   
   useEffect(() => {
     dispatch(getSum(cart.pizza))
-  }, [dispatch, cart])
+  }, [dispatch, cart.pizza])
 
   return (
     <div className="cart">
