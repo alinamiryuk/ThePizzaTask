@@ -3,9 +3,9 @@ A small web application for online pizza ordering. The
 idea is to make a non-existing service where assumed clients can choose a pizza, put it into a cart and make an order.
 
 ## Stack
-MERN (MongoDB, Express, React, Node), Redux, Redux-Thunk, CSS
+MERN (MongoDB, Express, React, Node), Redux, Redux-Thunk, JWT, CSS
 
-## Requirements:
+## Requirements
 * The task should be completed in English
 * The menu page should contain at least 8 pizzas
 * Don’t forget to add delivery costs to the final bill. It can be a static figure
