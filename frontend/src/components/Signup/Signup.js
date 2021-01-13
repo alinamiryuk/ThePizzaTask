@@ -3,15 +3,15 @@ import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { useForm } from '../../hooks/useForm'
 import { fetchSignupAuth } from '../../redux/thunks'
+import './Signup.css'
 
 export const Signup = () => {
   const dispatch = useDispatch()
   const [state, setState] = useForm({ email: '', password: '', userName: '' })
 
   return (
-    <>
-      {' '}
-      <h3>Sign up for setting your lineup </h3>
+    <div className="signup">
+      <h3>Sign up </h3>
       <label htmlFor="email-signup">What's your email?</label>
       <input
         id="email-signup"
@@ -47,12 +47,12 @@ export const Signup = () => {
           dispatch(fetchSignupAuth(state))
         }}
       >
-        Sign up
+        SIGNUP
       </button>
       <label>
         Have an account?
         <NavLink to="/login"> Log in</NavLink>
       </label>
-    </>
+    </div>
   )
 }
